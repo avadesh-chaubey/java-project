@@ -83,7 +83,7 @@ jobs:
         IMAGE_TAG: ${{ github.sha }}
       run: |-
         aws eks update-kubeconfig --region ap-south-1 --name k8s-cluster
-        kubectl set image deploy nginx nginx=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        kubectl set image deploy java nginx=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services -o wide
         
