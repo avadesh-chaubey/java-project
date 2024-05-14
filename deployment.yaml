@@ -14,7 +14,7 @@ spec:
         app: nginx
     spec:
       containers:
-        - name: nginx
+        - name: java
           image: 211125773797.dkr.ecr.ap-south-1.amazonaws.com/my-ecr-repo:58cde6718b155cb231815094112ec868b33b5896
 ---
 apiVersion: v1
