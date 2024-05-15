@@ -1,25 +1,20 @@
 package com.mycompany.app;
-
-/**
- * Hello world!
- */
+ 
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.web.bind.annotation.*;
+ 
+@RestController
+@EnableAutoConfiguration
 public class App {
-
-    private static final String MESSAGE = "Hello World! Welcome to this site";
-
-    public App() {}
-
-    public static void main(String[] args) {
-       
-        long start = System.currentTimeMillis();
-        long end = start + 30 * 10000;
-        while (System.currentTimeMillis() < end) {
-    // Some expensive operation on the item.
-        }
-    System.out.println(MESSAGE);
+ 
+    @RequestMapping("/")
+    String home() {
+        return "Hello World Spring Boot!";
     }
-
-    public String getMessage() {
-        return MESSAGE;
+ 
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(App.class, args);
     }
+ 
 }
