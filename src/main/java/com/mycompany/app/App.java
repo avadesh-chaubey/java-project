@@ -10,7 +10,7 @@ public class App {
  
     @RequestMapping("/")
     String home() {
-        return "Hello World Spring Boot! final Images";
+        return "Hello World Spring Boot! first deployment from virar";
     }
  
     public static void main(String[] args) throws Exception {
