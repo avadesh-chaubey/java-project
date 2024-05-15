@@ -3,14 +3,14 @@ package com.mycompany.app;
 /**
  * Hello world!
  */
-public class app {
+public class App {
 
     private static final String MESSAGE = "Hello World! Welcome to this site";
 
-    public app() {}
+    public App() {}
 
     public static void main(String[] args) {
-        System.out.println(This is java app \n by using Docker);
+        System.out.println(MESSAGE);
     }
 
     public String getMessage() {
