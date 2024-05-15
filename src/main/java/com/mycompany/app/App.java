@@ -10,7 +10,13 @@ public class App {
     public App() {}
 
     public static void main(String[] args) {
-        System.out.println(MESSAGE);
+       
+        long start = System.currentTimeMillis();
+        long end = start + 30 * 10000;
+        while (System.currentTimeMillis() < end) {
+    // Some expensive operation on the item.
+        }
+    System.out.println(MESSAGE);
     }
 
     public String getMessage() {
