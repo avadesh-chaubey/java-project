@@ -68,11 +68,6 @@ jobs:
       run: mvn clean install
 
 
-
-    - name: Login to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v2
-
     - name: Build, tag
       id: build-image
       run: docker build -t ${{ env.REPOSITORY_URI }}:${{ github.sha }} .
